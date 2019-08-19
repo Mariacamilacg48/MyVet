@@ -11,7 +11,7 @@ namespace MyVet.Web.Data.Entities
         public int Id { get; set; }
 
         [Display(Name = "Document")]
-        [MaxLength(20, ErrorMessage = "The {0} field can not have more than {1} characters.")]
+        [MaxLength(30, ErrorMessage = "The {0} field can not have more than {1} characters.")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string Document { get; set; }
 
@@ -40,6 +40,9 @@ namespace MyVet.Web.Data.Entities
 
         public string FullNameWithDocument => $"{FirstName} {LastName} - {Document}";
 
+        public ICollection<Pet> Pets { get; set; }
+
+        public ICollection<Agenda> Agendas { get; set; }
 
     }
 }
