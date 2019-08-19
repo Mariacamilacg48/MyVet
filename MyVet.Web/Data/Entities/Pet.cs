@@ -26,7 +26,7 @@ namespace MyVet.Web.Data.Entities
         public DateTime Born { get; set; }
 
         [Display(Name = "Born")]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}"]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
         public DateTime BornLocal => BornLocal.ToLocalTime();
 
         public string Remarks { get; set; }
